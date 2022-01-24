@@ -19,7 +19,7 @@ package create modules:
 cb = CinemaBar()
 customer = Customer("Bob", "popcorn")
 cb.sell_product(customer=customer, product=customer.food)
-# Cinema bar sold popcorn to Bob
+# Cinema bar sold popcorn to Bob.
 ```
    2. `hall.py` - inside this module create `CinemaHall`
    class that describes actions during the movie session. Its
@@ -41,7 +41,7 @@ cb.sell_product(customer=customer, product=customer.food)
 ```python
 bob = Customer(name="Bob", food="popcorn")
 bob.watch_movie(movie="Madagascar")
-# Bob is watching "Madagascar"
+# Bob is watching "Madagascar".
 ```
    2. `cinema_staff` - inside this module create `Cleaner` class,
    its constructor takes and stores `name`. 
@@ -76,8 +76,8 @@ hall_number = 5
 cleaner_name = "Anna"
 movie = "Madagascar"
 cinema_visit(customers=customers, hall_number=5, cleaner="Anna", movie="Madagascar")
-# Cinema bar sold Coca-cola to Bob
-# Cinema bar sold popcorn to Alex
+# Cinema bar sold Coca-cola to Bob.
+# Cinema bar sold popcorn to Alex.
 # "Madagascar" started in hall number 5.
 # Bob is watching "Madagascar".
 # Alex is watching "Madagascar".
