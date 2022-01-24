@@ -7,9 +7,9 @@ of what's going on in the cinema
 you decided to keep a record of events in the cinema.
 For this purpose you have to create such modules:
 
-1. In directory `app` create directory `cinema`. In this
-directory create modules:  
-   1. `cinema_bar.py` - inside this module create `CinemaBar`
+1. In directory `app` create package `cinema`. In this
+package create modules:  
+   1. `bar.py` - inside this module create `CinemaBar`
    class that describes work of cinema bar.
    This class should have only one static method `sell_product`,
    that takes `product` - name of the product that customer wants
@@ -21,7 +21,7 @@ customer = Customer("Bob", "popcorn")
 cb.sell_product(customer=customer, product=customer.food)
 # Cinema bar sold popcorn to Bob
 ```
-   2. `cinema_hall.py` - inside this module create `CinemaHall`
+   2. `hall.py` - inside this module create `CinemaHall`
    class that describes actions during the movie session. Its
    constructor takes and stores `number` - number of the hall
    in cinema.
@@ -31,7 +31,7 @@ cb.sell_product(customer=customer, product=customer.food)
    instance). This method prints about movie start, calls 
    customers method `watch_movie`, prints about movie end,
    calls cleaner method `clean_hall`.
-2. In directory `app` create director `people`. In this directory
+2. In directory `app` create package `people`. In this package
    create modules:
    1. `customer.py` - inside this module create `Customer` class,
    its constructor takes and stores `name`, `food` - food that 
@@ -54,13 +54,14 @@ anna.clean_hall(hall_number=5)
 # Cleaner Anna is cleaning hall number 5.
 ```
 In the module `main.py` you have to import all this classes. Classes
-should be import by absolute path, that starts with 'app...' write a
+should be imported by absolute path, that starts with 'app.' with 
+keyword 'from'. Write a
 function `cinema_visit` that takes `movie_name`, `customers` - a list 
 of customers, elements are dicts with 'name' and desired 'food' of a 
 customer, `cleaning_staff` - name of the cleaner, that will clean the
 hall after movie session.
 
-This function should make `Customers` instances, instances of `CinemaHall`
+This function should make `Customers` instances, instance of `CinemaHall`
 and `CinemaBar`, instance of `Cleaner`. First, cinema bar should sell food to
 customers, then cinema hall should make a movie session and finally cleaner
 cleans cinema hall.
