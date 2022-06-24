@@ -9,19 +9,21 @@ For this purpose you have to create such modules:
 
 1. In directory `app` create package `cinema`. In this
 package create modules:  
-   1. `bar.py` - inside this module create `CinemaBar`
+   - `bar.py` - inside this module create `CinemaBar`
    class that describes work of cinema bar.
    This class should have only one static method `sell_product`,
    that takes `product` - name of the product that customer wants
    and `customer` - `Customer` instance, that means customer.
    This method prints what product and to whom cinema sold.
-```python
-cb = CinemaBar()
-customer = Customer("Bob", "popcorn")
-cb.sell_product(customer=customer, product=customer.food)
-# Cinema bar sold popcorn to Bob.
-```
-   2. `hall.py` - inside this module create `CinemaHall`
+   
+   ```python
+   cb = CinemaBar()
+   customer = Customer("Bob", "popcorn")
+   cb.sell_product(customer=customer, product=customer.food)
+   # Cinema bar sold popcorn to Bob.
+   ```
+
+   - `hall.py` - inside this module create `CinemaHall`
    class that describes actions during the movie session. Its
    constructor takes and stores `number` - number of the hall
    in cinema.
@@ -33,26 +35,30 @@ cb.sell_product(customer=customer, product=customer.food)
    calls cleaner method `clean_hall`.
 2. In directory `app` create package `people`. In this package
    create modules:
-   1. `customer.py` - inside this module create `Customer` class,
+   - `customer.py` - inside this module create `Customer` class,
    its constructor takes and stores `name`, `food` - food that 
    customer wants to buy in cinema bar. 
    This class should have only one method `watch_movie`, this 
    method takes `movie` and prints what movie customer is watching.
-```python
-bob = Customer(name="Bob", food="popcorn")
-bob.watch_movie(movie="Madagascar")
-# Bob is watching "Madagascar".
-```
-   2. `cinema_staff` - inside this module create `Cleaner` class,
+   
+   ```python
+   bob = Customer(name="Bob", food="popcorn")
+   bob.watch_movie(movie="Madagascar")
+   # Bob is watching "Madagascar".
+   ```
+   
+   - `cinema_staff` - inside this module create `Cleaner` class,
    its constructor takes and stores `name`. 
    This class should have only one method `clean_hall`, this method
    takes `hall_number` - number of hall that cleaner have to clean and
    prints that cleaner is cleaning that hall.
-```python
-anna = Cleaner(name="Anna")
-anna.clean_hall(hall_number=5)
-# Cleaner Anna is cleaning hall number 5.
-```
+
+   ```python
+   anna = Cleaner(name="Anna")
+   anna.clean_hall(hall_number=5)
+   # Cleaner Anna is cleaning hall number 5.
+   ```
+
 In the module `main.py` you have to import all this classes. Classes
 should be imported by absolute path, that starts with 'app.' with 
 keyword 'from'. Write a
